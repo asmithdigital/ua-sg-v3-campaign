@@ -1,5 +1,6 @@
 $mdc-theme-primary: $crane-primary-color;
 
+@import "@material/typography/mdc-typography";
 @import "@material/button/mdc-button";
 @import "@material/select/mdc-select";
 @import "@material/textfield/mdc-text-field";
@@ -18,7 +19,7 @@ $mdc-theme-primary: $crane-primary-color;
 }
 
 .mdc-card {
-  margin-bottom: 1rem;
+  margin-bottom: $crane-row-margin;
 }
 
 .crane-button {

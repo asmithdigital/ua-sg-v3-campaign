@@ -24,11 +24,7 @@ body {
   max-width: $crane-main-max-width;
   margin: $crane-main-padding auto;
   padding: 0 $crane-main-padding;
-
-  * {
-    font-family: inherit !important;
-  }
-
+  
   .material-icons {
     font-family: 'Material Icons' !important;
   }
