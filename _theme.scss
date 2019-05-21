@@ -3,6 +3,8 @@ $mdc-theme-primary: $crane-primary-color;
 @import "@material/button/mdc-button";
 @import "@material/select/mdc-select";
 @import "@material/textfield/mdc-text-field";
+@import "@material/card/mdc-card";
+@import "@material/icon-button/mdc-icon-button";
 @import "./variables";
 
 
@@ -13,6 +15,10 @@ $mdc-theme-primary: $crane-primary-color;
 
 .mdc-select__native-control {
   background-image: inherit;
+}
+
+.mdc-card {
+  margin-bottom: 1rem;
 }
 
 .crane-button {
@@ -36,4 +42,63 @@ $mdc-theme-primary: $crane-primary-color;
   margin-top: 8px;
   padding: 12px;
   font-size: 1.1rem;
+}
+
+// Demo card
+.demo-card__primary {
+  padding: 1rem;
+}
+
+.demo-card__title {
+  margin: 0;
+}
+
+.demo-card__subtitle {
+  color: rgba(0, 0, 0, 0.54);
+  /* @alternate */
+  color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+  margin: 0;
+}
+
+.demo-card__secondary {
+  color: rgba(0, 0, 0, 0.54);
+  /* @alternate */
+  color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+  padding: 0 1rem 8px 1rem;
+}
+
+.demo-card-shaped {
+  /* @noflip */
+  border-radius: 24px 8px;
+}
+[dir=rtl] .demo-card-shaped, .demo-card-shaped[dir=rtl] {
+  /* @noflip */
+  border-radius: 8px 24px;
+}
+
+.demo-card__media.mdc-card__media--square {
+  width: 110px;
+}
+
+.demo-basic-with-header .demo-card__secondary,
+.demo-basic-with-text-over-media .demo-card__secondary {
+  padding-top: 1rem;
+}
+
+.demo-basic-with-text-over-media .demo-card__media-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+.demo-basic-with-text-over-media .demo-card__media-content .demo-card__title,
+.demo-basic-with-text-over-media .demo-card__media-content .demo-card__subtitle {
+  color: white;
+}
+
+.demo-ui-control .demo-card__primary-action {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }

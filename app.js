@@ -8,7 +8,7 @@ shippingForm.addEventListener('submit', (evt) => {
   alert('Success!');
 });
 
-new MDCRipple(document.querySelector('.mdc-button'));
+// new MDCRipple(document.querySelector('.mdc-button'));
 new MDCSelect(document.querySelector('.mdc-select'));
 
 const textFieldElements = [].slice.call(document.querySelectorAll('.mdc-text-field'));
@@ -16,3 +16,10 @@ textFieldElements.forEach((textFieldEl) => {
   new MDCTextField(textFieldEl);
 });
 
+const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+  return new MDCRipple(el);
+});
+
+// const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
+// iconButtonRipple.unbounded = true;
