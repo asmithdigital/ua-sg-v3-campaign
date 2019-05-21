@@ -14,12 +14,19 @@ function pages(cb) {
   cb();
 }
 
+function copy(cb) {
+  return src('ua-dep/**/*')
+  .pipe(dest('dist/ua-dep'));
+cb();
+}
+
 // function watchFiles(cb) {
 //     watch(['./src/{layouts,partials,helpers,data}/**/*'], [panini.refresh]);
 //     cb();
 //   }
 
 exports.pages = pages;
+exports.copy = copy;
 // exports.watch = function(cb) {
 //     parallel(watchFiles, pages);
 //     cb();
