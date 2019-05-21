@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@material/button": "^1.0.1",
-    "@material/ripple": "^1.0.1"
+    "@material/ripple": "^1.0.1",
+    "@material/select": "^1.0.1"
   }
 }

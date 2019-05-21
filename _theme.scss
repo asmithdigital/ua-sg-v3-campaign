@@ -1,6 +1,7 @@
 $mdc-theme-primary: $crane-primary-color;
 
 @import "@material/button/mdc-button";
+@import "@material/select/mdc-select";
 @import "./variables";
 
 .crane-button {

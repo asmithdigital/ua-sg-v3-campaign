@@ -26,7 +26,9 @@
     </div>
     <div class="crane-row">
       <div class="crane-field">
-        <select class="crane-input" id="crane-state-input" required>
+        <div class="mdc-select">
+        <i class="mdc-select__dropdown-icon"></i>
+        <select class="mdc-select__native-control" id="crane-state-input" required>
           <option value="" selected></option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
@@ -80,9 +82,11 @@
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </select>
-        <label class="crane-label" for="crane-state-input">
+        <label class="mdc-floating-label" for="crane-state-input">
           State
         </label>
+        <div class="mdc-line-ripple"></div>
+        </div>
       </div>
       <div class="crane-field">
         <!--

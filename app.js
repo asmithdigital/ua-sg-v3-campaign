@@ -1,3 +1,4 @@
+import {MDCSelect} from '@material/select';
 import {MDCRipple} from '@material/ripple';
 
 const shippingForm = document.querySelector('#crane-shipping-form');
@@ -7,4 +8,5 @@ shippingForm.addEventListener('submit', (evt) => {
 });
 
 new MDCRipple(document.querySelector('.mdc-button'));
+new MDCSelect(document.querySelector('.mdc-select'));
 
