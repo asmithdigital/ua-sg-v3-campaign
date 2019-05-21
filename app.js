@@ -1,3 +1,4 @@
+import {MDCTextField} from '@material/textfield';
 import {MDCSelect} from '@material/select';
 import {MDCRipple} from '@material/ripple';
 
@@ -9,4 +10,9 @@ shippingForm.addEventListener('submit', (evt) => {
 
 new MDCRipple(document.querySelector('.mdc-button'));
 new MDCSelect(document.querySelector('.mdc-select'));
+
+const textFieldElements = [].slice.call(document.querySelectorAll('.mdc-text-field'));
+textFieldElements.forEach((textFieldEl) => {
+  new MDCTextField(textFieldEl);
+});
 
