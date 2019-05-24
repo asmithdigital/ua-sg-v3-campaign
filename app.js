@@ -25,12 +25,7 @@ const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
 const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
 iconButtonRipple.unbounded = true;
 
-// var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementById('icon-toggle-button'));
-
-const mainEl = document.querySelector('.main-content');
-// // Icon button toggle
-const iconToggleEl = mainEl.querySelector('#icon-toggle-button');
-const iconToggle = new MDCIconButtonToggle(iconToggleEl);
+const iconToggle = new MDCIconButtonToggle(document.querySelector('#icon-toggle-button'));
 iconToggle.unbounded = true;
 
 
