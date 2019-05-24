@@ -6,6 +6,7 @@ module.exports = [
     entry: './scss/app.scss',
     output: {
       path: path.join(__dirname, 'dist'),
+      publicPath: '/dist/',
       // This is necessary for webpack to compile
       // But we never use style-bundle.js
       filename: 'style-bundle.js',
@@ -44,6 +45,7 @@ module.exports = [
     entry: "./js/app.js",
     output: {
       path: path.join(__dirname, 'dist'),
+      publicPath: '/dist/',
       filename: "bundle.js"
     },
     module: {
