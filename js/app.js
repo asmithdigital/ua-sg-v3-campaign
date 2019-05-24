@@ -4,10 +4,12 @@ import {MDCRipple} from '@material/ripple';
 import {MDCIconButtonToggle} from '@material/icon-button';
 
 const shippingForm = document.querySelector('#crane-shipping-form');
-shippingForm.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-  alert('Success!');
-});
+if (shippingForm) {
+  shippingForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    alert('Success!');
+  });  
+}
 
 // new MDCRipple(document.querySelector('.mdc-button'));
 new MDCSelect(document.querySelector('.mdc-select'));
@@ -27,6 +29,7 @@ iconButtonRipple.unbounded = true;
 
 const iconToggle = new MDCIconButtonToggle(document.querySelector('#icon-toggle-button'));
 iconToggle.unbounded = true;
+
 
 
 // Glitch theme builder below
