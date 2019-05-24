@@ -1,6 +1,4 @@
-@import "./layout";
-@import "./theme";
-
+@import "./variables";
 // Import styles for each MDC Web component
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
@@ -39,5 +37,5 @@
 @import "@material/typography/mdc-typography";
 
 // Import site-specific CSS files
-// @import "my-layout";
-@import "components";
+@import "./layout";
+@import "./theme";

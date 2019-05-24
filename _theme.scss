@@ -1,14 +1,3 @@
-$mdc-theme-primary: $crane-primary-color;
-
-@import "@material/typography/mdc-typography";
-@import "@material/button/mdc-button";
-@import "@material/select/mdc-select";
-@import "@material/textfield/mdc-text-field";
-@import "@material/card/mdc-card";
-@import "@material/icon-button/mdc-icon-button";
-@import "./variables";
-
-
 .mdc-text-field__input {
   display: inherit;
   margin: inherit;
@@ -79,4 +68,74 @@ $mdc-theme-primary: $crane-primary-color;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
+}
+
+// Demo layouts
+.component-section {
+  margin-bottom: 2rem;
+}
+
+// Top app bar
+.component-wrapper .mdc-top-app-bar {
+  @include mdc-elevation(4);
+  position: relative;
+  z-index: 1;
+
+  &:not(.mdc-top-app-bar--short) {
+    width: 100%;
+  }
+}
+
+// Menu
+.mdc-menu-surface--anchor > .mdc-menu {
+  position: relative;
+  z-index: 1;
+}
+
+// Drawer
+.drawer-component-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+
+  .mdc-drawer {
+    @include mdc-elevation(16);
+
+    .mdc-drawer__content {
+      padding: 0;
+    }
+  }
+}
+
+// Snackbar 
+.mdc-snackbar {
+  position: relative;
+  margin: 0;
+  justify-content: start;
+  z-index: 1;
+}
+
+// Dialog
+.mdc-dialog {
+  position: relative;
+  justify-content: start;
+  z-index: 1;
+}
+
+// List
+.component-wrapper > .mdc-list {
+  border: 1px solid rgba(0,0,0,.1);
+  background: $mdc-theme-background;
+
+  .mdc-list-item__graphic {
+    background-color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
+      rgba(0, 0, 0, 0.12),
+      rgba(255, 255, 255, 0.12));
+    color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
+      rgba(0, 0, 0, 0.68),
+      rgba(255, 255, 255, 0.68));
+  }
+}
+
+// Image list
+.mdc-image-list {
+  @include mdc-image-list-masonry-columns(2);
 }
