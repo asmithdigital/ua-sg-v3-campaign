@@ -3,7 +3,7 @@ var path = require("path");
 
 module.exports = [
   {
-    entry: './app.scss',
+    entry: './scss/app.scss',
     output: {
       path: path.join(__dirname, 'dist'),
       // This is necessary for webpack to compile
@@ -41,7 +41,7 @@ module.exports = [
     },
   },
   {
-    entry: "./app.js",
+    entry: "./js/app.js",
     output: {
       path: path.join(__dirname, 'dist'),
       filename: "bundle.js"
