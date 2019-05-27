@@ -12,7 +12,10 @@ if (shippingForm) {
 }
 
 // new MDCRipple(document.querySelector('.mdc-button'));
-new MDCSelect(document.querySelector('.mdc-select'));
+let $selectElement = document.querySelector('.mdc-select');
+if ($selectElement){
+  new MDCSelect(document.querySelector('.mdc-select'));
+}
 
 const textFieldElements = [].slice.call(document.querySelectorAll('.mdc-text-field'));
 textFieldElements.forEach((textFieldEl) => {
@@ -24,11 +27,17 @@ const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
   return new MDCRipple(el);
 });
 
-const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
-iconButtonRipple.unbounded = true;
+let $iconButton = document.querySelector('.mdc-icon-button');
+if ($iconButton) {
+  const iconButtonRipple = new MDCRipple($iconButton);
+  iconButtonRipple.unbounded = true;
+}
 
-const iconToggle = new MDCIconButtonToggle(document.querySelector('#icon-toggle-button'));
-iconToggle.unbounded = true;
+let $toggleButton = document.querySelector('#icon-toggle-button');
+if ($toggleButton) {
+  const iconToggle = new MDCIconButtonToggle($toggleButton);
+  iconToggle.unbounded = true;
+}
 
 
 
