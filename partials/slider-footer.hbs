@@ -1,0 +1,74 @@
+	<script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
+  {{!-- <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.video.min.js"></script> --}}
+
+  <script>
+    jQuery(document).ready(function () {
+      var slider = jQuery('#rev_slider_1').show().revolution({
+        sliderLayout: 'fullscreen',
+        fullScreenOffset: "10%",
+        jsFileLocation: '',
+        spinner: "spinner4",
+        delay: 9000,
+        navigation: {
+          keyboardNavigation: 'on',
+          keyboard_direction: 'horizontal',
+          onHoverStop: 'on',
+          arrows: {
+            enable: true,
+            style: "uranus",
+            hide_onleave: true,
+            hide_onmobile: true,
+            hide_delay: 200
+          },
+          bullets: {
+            enable: true,
+            style: "hebe",
+            tmp: '<span class="tp-bullet-image"></span>',
+            hide_onleave: true,
+            hide_onmobile: true,
+            hide_delay: 200,
+            h_align: "center",
+            v_align: "bottom",
+            h_offset: 0,
+            v_offset: 20,
+            space: 5
+          },
+          touch: {
+            touchenabled: 'on',
+            swipe_threshold: 75,
+            swipe_min_touches: 1,
+            swipe_direction: 'horizontal',
+            drag_block_vertical: true
+          }
+        },
+        viewPort: {
+          enable: true,
+          outof: "wait",
+          visible_area: "80%",
+          presize: false
+        },
+        responsiveLevels: [1240, 1024, 778, 480],
+        visibilityLevels: [1240, 1024, 778, 480],
+        gridwidth: [1240, 1024, 778, 480],
+        gridheight: [700, 700, 500, 400],
+        lazyType: "smart",
+        parallax: {
+          type: 'scroll',
+          origo:"slidercenter",
+          speed:400,
+          levels: [5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+        }
+      });
+    });
+</script>

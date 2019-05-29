@@ -1,107 +1,28 @@
-<p class="c-back-top js-back-top">
-    <a href="#ua-top" title="back to top" class="c-btn js-smooth-scroll"><i class="fa fa-angle-up"></i> top</a>
-  </p>
-
-  {{!-- <script src="//global.adelaide.edu.au/style-guide-v2/0.37.0/js/header-footer.js"></script> --}}
-
-  {{!-- <script src="//global.adelaide.edu.au/style-guide-v2/latest/js/plugins/global-assets-loader.js"></script>
-  <script>
-      var _globalassets = new GlobalAssetsLoader({
-        "quicklinks": {
-          "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-quicklinks-menu.html",
-          "selector": "ua-header-quicklinks"
-        },
-        "search": {
-          "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-search.html",
-          "selector": "ua-search"
-        },
-        "megamenu": {
-          "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-mega-menu.html",
-          "selector": "ua-mega-menu"
-        },
-        "footer": {
-          "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-global-footer.html",
-          "selector": "ua-footer"
-        }
-      });
-  </script> --}}
-
-  <script src="dist/ua-dep/js/app.jquery.js"></script>
-  <script src="dist/bundle.js" async></script>
-
-					<!-- REVOLUTION JS FILES -->
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
-
-		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-		<script type="text/javascript" src="https://asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
-
-		<script type="text/javascript">
-  jQuery(document).ready(function () {
-    var slider = jQuery('#rev_slider_1').show().revolution({
-      sliderLayout: 'fullscreen',
-      fullScreenOffset: "10%",
-      jsFileLocation: '',
-      spinner: "spinner4",
-      delay: 9000,
-      navigation: {
-        keyboardNavigation: 'on',
-        keyboard_direction: 'horizontal',
-        onHoverStop: 'on',
-        arrows: {
-          enable: true,
-          style: "uranus",
-          hide_onleave: true,
-          hide_onmobile: true,
-          hide_delay: 200
-        },
-        bullets: {
-          enable: true,
-          style: "hebe",
-          tmp: '<span class="tp-bullet-image"></span>',
-          hide_onleave: true,
-          hide_onmobile: true,
-          hide_delay: 200,
-          h_align: "center",
-          v_align: "bottom",
-          h_offset: 0,
-          v_offset: 20,
-          space: 5
-        },
-        touch: {
-          touchenabled: 'on',
-          swipe_threshold: 75,
-          swipe_min_touches: 1,
-          swipe_direction: 'horizontal',
-          drag_block_vertical: true
-        }
-      },
-      viewPort: {
-        enable: true,
-        outof: "wait",
-        visible_area: "80%",
-        presize: false
-      },
-      responsiveLevels: [1240, 1024, 778, 480],
-      visibilityLevels: [1240, 1024, 778, 480],
-      gridwidth: [1240, 1024, 778, 480],
-      gridheight: [700, 700, 500, 400],
-      lazyType: "smart",
-      parallax: {
-        type: 'scroll',
-        origo:"slidercenter",
-        speed:400,
-        levels: [5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
-      }
-    });
+{{!-- <script src="//global.adelaide.edu.au/style-guide-v2/latest/js/plugins/global-assets-loader.js"></script>
+<script>
+  var _globalassets = new GlobalAssetsLoader({
+    "quicklinks": {
+      "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-quicklinks-menu.html",
+      "selector": "ua-header-quicklinks"
+    },
+    "search": {
+      "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-search.html",
+      "selector": "ua-search"
+    },
+    "megamenu": {
+      "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-mega-menu.html",
+      "selector": "ua-mega-menu"
+    },
+    "footer": {
+      "path": "//global.adelaide.edu.au/v/style-guide2/includes/common/static-global-footer.html",
+      "selector": "ua-footer"
+    }
   });
+</script> --}}
 
-</script>
+<script src="ua-dep/js/app.jquery.js"></script>
+<script src="bundle.js" async></script>
+
+{{#if slider}}
+{{> slider-footer}}
+{{/if}}	
