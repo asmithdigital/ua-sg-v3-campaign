@@ -5,13 +5,10 @@ body {
 }
 
 .demo-grid {
-  @include mdc-layout-grid(desktop, 0);
+  // @include mdc-layout-grid(desktop, 0);
+  padding: 0;
 }
 
 .demo-cell {
-  background: rgba(0,0,0,.2);
-  height: 100px;
-  border: 1px solid #fff;
-
-  @include mdc-layout-grid-cell(desktop, 4, 0);
+  @include mdc-layout-grid-cell(desktop, 3, 0);
 }
