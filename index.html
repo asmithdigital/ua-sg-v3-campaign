@@ -1399,9 +1399,9 @@
   
   
     <script>
+  		jQuery(document).ready(function () {
   
-       jQuery(document).ready(function () {
-        var slider = jQuery("#rev_slider_services").show().revolution({
+        var sliderServices = jQuery("#rev_slider_services").show().revolution({
   						sliderType:"standard",
               jsFileLocation:"",
   						sliderLayout:"fullwidth",
@@ -1440,11 +1440,8 @@
   							disableFocusListener:false,
   						}
   					});
-          });
   
-  
-         jQuery(document).ready(function () {
-            var slider = jQuery("#rev_slider_media").show().revolution({
+            var sliderMedia = jQuery("#rev_slider_media").show().revolution({
   						sliderType:"carousel",
               jsFileLocation:"",
   						sliderLayout:"fullwidth",
@@ -1541,12 +1538,8 @@
   							disableFocusListener:false,
   						}
   					});
-          });
-  
-  
-  
-          jQuery(document).ready(function () {
-            var slider = jQuery("#rev_slider_news-video").show().revolution({
+         
+            var sliderNewsVideo = jQuery("#rev_slider_news-video").show().revolution({
   						sliderType:"hero",
               jsFileLocation:"",
   						sliderLayout:"fullwidth",
@@ -1586,10 +1579,7 @@
   							disableFocusListener:false,
   						}
   					});
-          });
-  
-  
-  				jQuery(document).ready(function () {
+         
             var revealSlider = jQuery("#rev_slider_revealer").show().revolution({
   						sliderType:"standard",
   						jsFileLocation:"",

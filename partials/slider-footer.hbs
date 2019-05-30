@@ -18,9 +18,9 @@
 	{{/if}}
 
   <script>
+		jQuery(document).ready(function () {
     {{#if slider-main}}
-    jQuery(document).ready(function () {
-      var slider = jQuery('#rev_slider_1').show().revolution({
+      var sliderMain = jQuery('#rev_slider_main').show().revolution({
         sliderLayout: 'fullscreen',
 				fullScreenOffsetContainer: '#ua-header-menu',
         jsFileLocation: '',
@@ -76,12 +76,9 @@
           levels: [5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
         }
       });
-    });
-
     {{/if}}
 
-     jQuery(document).ready(function () {
-      var slider = jQuery("#rev_slider_services").show().revolution({
+      var sliderServices = jQuery("#rev_slider_services").show().revolution({
 						sliderType:"standard",
             jsFileLocation:"",
 						sliderLayout:"fullwidth",
@@ -120,11 +117,8 @@
 							disableFocusListener:false,
 						}
 					});
-        });
 
-
-       jQuery(document).ready(function () {
-          var slider = jQuery("#rev_slider_media").show().revolution({
+          var sliderMedia = jQuery("#rev_slider_media").show().revolution({
 						sliderType:"carousel",
             jsFileLocation:"",
 						sliderLayout:"fullwidth",
@@ -221,12 +215,8 @@
 							disableFocusListener:false,
 						}
 					});
-        });
-
-
-
-        jQuery(document).ready(function () {
-          var slider = jQuery("#rev_slider_news-video").show().revolution({
+       
+          var sliderNewsVideo = jQuery("#rev_slider_news-video").show().revolution({
 						sliderType:"hero",
             jsFileLocation:"",
 						sliderLayout:"fullwidth",
@@ -266,10 +256,7 @@
 							disableFocusListener:false,
 						}
 					});
-        });
-
-
-				jQuery(document).ready(function () {
+       
           var revealSlider = jQuery("#rev_slider_revealer").show().revolution({
 						sliderType:"standard",
 						jsFileLocation:"",
