@@ -61,6 +61,18 @@ $('#js-grid-slider-testimonials').cubeportfolio({
   displayType: 'default',
 });
 
+ // init cubeportfolio
+ $('#js-grid-faq').cubeportfolio({
+  filters: '#js-filters-faq',
+  defaultFilter: '*',
+  animationType: 'sequentially',
+  gridAdjustment: 'default',
+  displayType: 'default',
+  caption: 'expand',
+  gapHorizontal: 0,
+  gapVertical: 0,
+});
+
 
 // Glitch theme builder below
 
