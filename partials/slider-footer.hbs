@@ -22,7 +22,7 @@
     jQuery(document).ready(function () {
       var slider = jQuery('#rev_slider_1').show().revolution({
         sliderLayout: 'fullscreen',
-        fullScreenOffset: "10%",
+				fullScreenOffsetContainer: '#ua-header-menu',
         jsFileLocation: '',
         spinner: "spinner4",
         delay: 9000,
@@ -360,7 +360,7 @@
 						autoHeight:"off",
 						fullScreenAutoWidth:"off",
 						fullScreenAlignForce:"off",
-						fullScreenOffsetContainer: "",
+						fullScreenOffsetContainer: '#ua-header-menu',
 						fullScreenOffset: "",
 						disableProgressBar:"on",
 						hideThumbsOnMobile:"off",
@@ -374,9 +374,10 @@
 							disableFocusListener:false,
 						}
 					});
+					{{#if slider-revealer}}
 					RsParticlesAddOn(revealSlider);
     			RsRevealerAddOn(jQuery, revealSlider, "<div class='rsaddon-revealer-spinner rsaddon-revealer-spinner-1'><div class='rsaddon-revealer-1'><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><\/div><\/div \/>");
-
+					{{/if}}
 					
 				});
 </script>
