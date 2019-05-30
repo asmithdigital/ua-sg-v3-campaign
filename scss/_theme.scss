@@ -18,6 +18,11 @@
   @include mdc-image-list-masonry-columns(2);
 }
 
+$mdc-image-list-masonry-gutter-size: 0;
+.my-image-list {
+  @include mdc-image-list-masonry-columns(4);
+}
+
 // Drawer
 .drawer-component-wrapper {
   background: rgba(0, 0, 0, 0.3);
@@ -30,9 +35,6 @@
     }
   }
 }
-
-
-
 
 
 // Override SG
