@@ -15,8 +15,8 @@ function pages(cb) {
 }
 
 function copy(cb) {
-  return src('ua-dep/**/*')
-    .pipe(dest('dist/ua-dep'));
+  return src('deps/**/*')
+    .pipe(dest('dist/deps'));
   cb();
 }
 
