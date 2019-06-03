@@ -21,7 +21,7 @@
 		jQuery(document).ready(function () {
     {{#if slider-main}}
       var sliderMain = jQuery('#rev_slider_main').show().revolution({
-        sliderLayout: 'fullscreen',
+        {{#unless standard-slider}}sliderLayout: 'fullscreen',{{/unless}}
 				fullScreenOffsetContainer: '#ua-header-menu',
         jsFileLocation: '',
         spinner: "spinner4",
