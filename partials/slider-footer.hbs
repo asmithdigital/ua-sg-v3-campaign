@@ -31,14 +31,14 @@
           keyboard_direction: 'horizontal',
           onHoverStop: 'on',
           arrows: {
-            enable: true,
+            {{#unless standard-slider}}enable: true,{{/unless}}
             style: "uranus",
             hide_onleave: true,
             hide_onmobile: true,
             hide_delay: 200
           },
           bullets: {
-            enable: true,
+            {{#unless standard-slider}}enable: true,{{/unless}}
             style: "hebe",
             tmp: '<span class="tp-bullet-image"></span>',
             hide_onleave: true,
