@@ -10,5 +10,5 @@ body {
 }
 
 .demo-cell {
-  @include mdc-layout-grid-cell(desktop, 3, 0);
+  @include mdc-layout-grid-cell(desktop, 4, 0);
 }
