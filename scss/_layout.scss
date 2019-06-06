@@ -2,6 +2,9 @@ body {
   .material-icons {
     font-family: 'Material Icons' !important;
   }
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
 }
 
 .demo-grid {
@@ -15,6 +18,7 @@ body {
 
 .content-grid {
   --mdc-layout-grid-margin-desktop: 150px 0;
+  --mdc-layout-grid-gutter-desktop: 90px;
   max-width: 75rem;
 }
 
@@ -26,4 +30,20 @@ body {
   &--secondary {
     background: $mdc-theme-secondary;
   }
+
+  &--primary,
+  &--secondary {
+    --mdc-theme-text-primary-on-background: white;
+    --mdc-theme-text-secondary-on-background: white;
+    --mdc-theme-text-icon-on-background: white;
+    color: var(--mdc-theme-text-primary-on-background);
+
+    .mdc-list-divider {
+      border-bottom-color: rgba(white, 0.5);
+    }
+  }
+}
+
+.demo-button--secondary {
+  @include mdc-button-container-fill-color(secondary);
 }
