@@ -1,0 +1,9 @@
+layout-section:
+    -
+      section: ''
+    -
+      section: '--primary'
+    -
+      section: ''
+    -
+      section: '--secondary'

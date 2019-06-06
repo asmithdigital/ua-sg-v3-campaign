@@ -5,11 +5,25 @@ body {
 }
 
 .demo-grid {
-  // @include mdc-layout-grid(desktop, 0);
+  --mdc-layout-grid-gutter-desktop: 0;
   padding: 0;
-  margin-bottom: $crane-row-margin;
 }
 
 .demo-cell {
   @include mdc-layout-grid-cell(desktop, 4, 0);
+}
+
+.content-grid {
+  --mdc-layout-grid-margin-desktop: 150px 0;
+  max-width: 75rem;
+}
+
+.content-grid__layout-section {
+  &--primary {
+    background: $mdc-theme-primary;
+  }
+
+  &--secondary {
+    background: $mdc-theme-secondary;
+  }
 }

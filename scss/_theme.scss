@@ -1,16 +1,16 @@
 // List
 .mdc-list {
-  border: 1px solid rgba(0,0,0,.1);
-  background: $mdc-theme-background;
+  // border: 1px solid rgba(0,0,0,.1);
+  // background: $mdc-theme-background;
 
-  .mdc-list-item__graphic {
-    background-color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
-      rgba(0, 0, 0, 0.12),
-      rgba(255, 255, 255, 0.12));
-    color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
-      rgba(0, 0, 0, 0.68),
-      rgba(255, 255, 255, 0.68));
-  }
+  // .mdc-list-item__graphic {
+  //   background-color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
+  //     rgba(0, 0, 0, 0.12),
+  //     rgba(255, 255, 255, 0.12));
+  //   color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
+  //     rgba(0, 0, 0, 0.68),
+  //     rgba(255, 255, 255, 0.68));
+  // }
 }
 
 // Image list
@@ -60,7 +60,7 @@ $mdc-image-list-masonry-gutter-size: 0;
 // ================================
 
 .demo-card__media-content {
-  background: rgba(0,0,0,.2)
+  background: rgba(0,0,0,.5)
 }
 
 .demo-card__media {

@@ -34,6 +34,38 @@
     </div>
   </div>
 
+  {{#each global.layout-section}}
+  <div class="content-grid__layout-section{{section}}">
+    <div class="mdc-layout-grid content-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+            <h2 class="mdc-typography--headline2">Arts</h2>
+            <p class="mdc-typography mdc-typography--body2">Bacon ipsum dolor amet turducken ground round salami porchetta tongue, short ribs kevin capicola drumstick. Alcatra pork short ribs capicola, corned beef chicken fatback. Burgdoggen spare ribs landjaeger ribeye tongue salami fatback meatloaf pig bresaola. </p>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <h2 class="mdc-typography--headline2">Arts</h2>
+            <ul class="mdc-list">
+              <li class="mdc-list-item" tabindex="0">
+                <span class="mdc-list-item__graphic material-icons" aria-hidden="true">whatshot</span>
+                <span class="mdc-list-item__text">Item 1 - Division 1</span>
+              </li>
+              <li role="separator" class="mdc-list-divider"></li>
+              <li class="mdc-list-item">
+                <span class="mdc-list-item__graphic material-icons" aria-hidden="true">whatshot</span>
+                <span class="mdc-list-item__text">Item 2 - Division 1</span>
+              </li>
+              <li role="separator" class="mdc-list-divider"></li>
+              <li class="mdc-list-item">
+                <span class="mdc-list-item__graphic material-icons" aria-hidden="true">whatshot</span>
+                <span class="mdc-list-item__text">Item 1 - Division 2</span>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
   <!-- <ul class="mdc-image-list mdc-image-list--masonry my-image-list">
     {{#repeat 4}}
     <li class="mdc-image-list__item">
