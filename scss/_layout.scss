@@ -7,6 +7,7 @@ body {
 .demo-grid {
   // @include mdc-layout-grid(desktop, 0);
   padding: 0;
+  margin-bottom: $crane-row-margin;
 }
 
 .demo-cell {

@@ -1,24 +1,54 @@
 ---
-
+<!-- slider: true -->
+<!-- slider-main: true -->
 ---
   
   </div>
 
-  <ul class="mdc-image-list mdc-image-list--masonry my-image-list">
+  <!-- <h1 class="mdc-typography--headline1">Headline 1</h1>
+  <h2 class="mdc-typography--headline2">Headline 2</h2>
+  <h3 class="mdc-typography--headline3">Headline 3</h3>
+  <h4 class="mdc-typography--headline4">Headline 4</h4>
+  <h5 class="mdc-typography--headline5">Headline 5</h5>
+  <h6 class="mdc-typography--headline6">Headline 6</h6> -->
+
+
+  <div class="mdc-layout-grid demo-grid">
+    <div class="mdc-layout-grid__inner">
+      {{#repeat 6}}
+      <div class="mdc-layout-grid__cell demo-cell">
+        <div class="mdc-card demo-card demo-basic-with-text-over-media">
+          <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+            <div class="mdc-card__media demo-card__media" style="background-image: url(&quot;https://www.adelaide.edu.au/front/images/mo-scholarships-2.jpg&quot;);">
+              <div class="mdc-card__media-content demo-card__media-content">
+                <div class="demo-card__primary">
+                  <h2 class="demo-card__title mdc-typography mdc-typography--headline4">Heading</h2>
+                  <p class="demo-card__subtitle mdc-typography mdc-typography--body2">Bacon ipsum dolor amet t-bone pork loin doner, salami bresaola pig jowl strip steak porchetta flank shank meatball landjaeger.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/repeat}}
+    </div>
+  </div>
+
+  <!-- <ul class="mdc-image-list mdc-image-list--masonry my-image-list">
     {{#repeat 4}}
     <li class="mdc-image-list__item">
-      <img class="mdc-image-list__image" src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/1.jpg">
+      <img class="mdc-image-list__image" src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/1.jpg"> -->
       <!-- <div class="mdc-image-list__image-aspect-container">
         <img class="mdc-image-list__image" src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/1.jpg">
       </div> -->
-      <div class="mdc-image-list__supporting">
+      <!-- <div class="mdc-image-list__supporting">
         <span class="mdc-image-list__label">I am a text label in an image list</span>
       </div>
     </li>
     {{/repeat}}
-  </ul>
+  </ul> -->
 
-  <div class="o-layout__container">
+  <!-- <div class="o-layout__container">
     <div class="o-layout__content-row">              
       <div class="o-layout__content-column-full is-campaign">
 
@@ -57,4 +87,4 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
