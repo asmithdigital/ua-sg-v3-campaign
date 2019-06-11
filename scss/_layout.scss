@@ -27,11 +27,16 @@ body {
     background: $mdc-theme-primary;
   }
 
+  &--primary-variant {
+    background: $mdc-theme-primary-variant;
+  }
+
   &--secondary {
     background: $mdc-theme-secondary;
   }
 
   &--primary,
+  &--primary-variant,
   &--secondary {
     --mdc-theme-text-primary-on-background: white;
     --mdc-theme-text-secondary-on-background: white;
@@ -44,6 +49,13 @@ body {
   }
 }
 
-.demo-button--secondary {
-  @include mdc-button-container-fill-color(secondary);
+// .demo-button--secondary {
+//   @include mdc-button-container-fill-color(secondary);
+// }
+
+.demo-button-outlined-inverse {
+  @include mdc-button-outline-color(white);
+  @include mdc-button-ink-color(white);
 }
+
+

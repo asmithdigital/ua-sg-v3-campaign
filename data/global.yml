@@ -6,4 +6,8 @@ layout-section:
     -
       section: ''
     -
+      section: '--primary-variant'
+    -
+      section: ''
+    -
       section: '--secondary'

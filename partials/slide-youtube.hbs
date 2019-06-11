@@ -57,6 +57,10 @@
         data-height="auto"
         data-frames='[{"delay":"+790","speed":1000,"frame":"0","from":"y:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"1500","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
         style="font-size: 1rem;font-family:sans-serif;"
-        >Button</div>        
+        >Button</div>     
+
+      {{#unless standard-slider}}
+      {{> slider-scrollbelow}}
+      {{/unless}}   
   </li>
   
