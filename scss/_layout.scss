@@ -58,4 +58,9 @@ body {
   @include mdc-button-ink-color(white);
 }
 
+.centered-column {
+  grid-column-start: 4;
+  text-align: center;
+}
+
 
