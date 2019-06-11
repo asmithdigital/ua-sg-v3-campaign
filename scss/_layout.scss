@@ -18,7 +18,7 @@ body {
 
 .content-grid {
   --mdc-layout-grid-margin-desktop: 150px 0;
-  --mdc-layout-grid-gutter-desktop: 90px;
+  // --mdc-layout-grid-gutter-desktop: 90px;
   max-width: 75rem;
 }
 
@@ -49,9 +49,9 @@ body {
   }
 }
 
-// .demo-button--secondary {
-//   @include mdc-button-container-fill-color(secondary);
-// }
+.demo-button--secondary {
+  @include mdc-button-container-fill-color(secondary);
+}
 
 .demo-button-outlined-inverse {
   @include mdc-button-outline-color(white);
@@ -59,7 +59,7 @@ body {
 }
 
 .centered-column {
-  grid-column-start: 4;
+  // grid-column-start: 4;
   text-align: center;
 }
 
