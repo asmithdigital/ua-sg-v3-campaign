@@ -962,13 +962,20 @@
           }
         });
   
-  			var targetdate =  new Date().getTime() + 864000000 // i.e. '2015/12/31 24:00',
+  			// SET TARGET DATE TO START COUNT DOWN FROM
+  			// SET UNLIMITED TIME STAMPS TO JUMP TO OTHER SLIDES BASED ON THE REST TIME VIA slidechanges
+  			// SET THE JUMP AHEAD VIA THE QUICK JUMP  (15000 == 15 sec)
+  			// DONT FORGET TO DEFINE THE CONTAINER ID 
+  			var targetdate =  new Date().getTime() + 1560522600 // https://www.epochconverter.com/,
   				slidechanges = [
   												{ days:0, hours:0, minutes:0, seconds:12, slide:2},
   												{ days:0, hours:0, minutes:0, seconds:0, slide:3}
   												];
   			tp_countdown(sliderMain,targetdate,slidechanges);       
   			RsTypewriterAddOn(jQuery, sliderMain);
+  
+  			console.log(new Date().getTime());
+  
   
   		
   
