@@ -94,7 +94,7 @@
 
     {{/if}}
 		
-		{{#unless slider-main}}
+		{{#if slider-alternative}}
       var sliderServices = jQuery("#rev_slider_services").show().revolution({
 						sliderType:"standard",
             jsFileLocation:"",
@@ -273,7 +273,9 @@
 							disableFocusListener:false,
 						}
 					});
-       
+					{{/if}}
+
+
 			 		{{#if slider-revealer}}
           var revealSlider = jQuery("#rev_slider_revealer").show().revolution({
 						sliderType:"standard",
@@ -383,8 +385,6 @@
 					RsParticlesAddOn(revealSlider);
     			RsRevealerAddOn(jQuery, revealSlider, "<div class='rsaddon-revealer-spinner rsaddon-revealer-spinner-1'><div class='rsaddon-revealer-1'><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><\/div><\/div \/>");
 					{{/if}}
-
-					{{/unless}}
 					
 				});
 </script>
