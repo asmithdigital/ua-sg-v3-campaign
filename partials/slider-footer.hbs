@@ -17,7 +17,7 @@
 	<script type='text/javascript' src='//asmithdigital.github.io/my-fancy-slider/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
 	{{/if}}
 
-	{{#if slider-countdown}}
+	{{#if countdown}}
 	<script type='text/javascript' src='//asmithdigital.github.io/my-fancy-slider/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js'></script>
 	<script type='text/javascript' src='//asmithdigital.github.io/my-fancy-slider/revolution-addons/countdown/revolution.addon.countdown.min.js'></script>
 	{{/if}}
@@ -26,8 +26,8 @@
 		jQuery(document).ready(function () {
     {{#if slider-main}}
       var sliderMain = jQuery('#rev_slider_main').show().revolution({
-        {{#unless standard-slider}}sliderLayout: 'fullscreen',{{/unless}}
-				fullScreenOffsetContainer: '#ua-header-menu',
+        {{#unless standard-height}}sliderLayout: 'fullscreen',
+				fullScreenOffsetContainer: '#ua-header-menu',{{/unless}}
         jsFileLocation: '',
         spinner: "spinner4",
         delay: 9000,
@@ -36,14 +36,14 @@
           keyboard_direction: 'horizontal',
           onHoverStop: 'on',
           arrows: {
-            {{#unless standard-slider}}enable: true,{{/unless}}
+            {{#unless no-slide-controls}}enable: true,{{/unless}}
             style: "uranus",
             hide_onleave: true,
             hide_onmobile: true,
             hide_delay: 200
           },
           bullets: {
-            {{#unless standard-slider}}enable: true,{{/unless}}
+            {{#unless no-slide-controls}}enable: true,{{/unless}}
             style: "hebe",
             tmp: '<span class="tp-bullet-image"></span>',
             hide_onleave: true,
@@ -81,57 +81,20 @@
           levels: [5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
         }
       });
-    {{/if}}
 
-		{{#if slider-countdown}}
-		var sliderCountdown = jQuery("#rev_slider_countdown").show().revolution({
-				sliderType:"hero",
-				jsFileLocation:"",
-				sliderLayout:"fullscreen",
-				dottedOverlay:"none",
-				delay:9000,
-				navigation: {
-				},
-				responsiveLevels:[1240,1024,778,480],
-				visibilityLevels:[1240,1024,778,480],
-				gridwidth:[1240,1024,778,480],
-				gridheight:[868,768,960,720],
-				lazyType:"none",
-				shadow:0,
-				spinner:"off",
-				autoHeight:"off",
-				fullScreenAutoWidth:"off",
-				fullScreenAlignForce:"off",
-				fullScreenOffsetContainer: '#ua-header-menu',
-				fullScreenOffset: "",
-				disableProgressBar:"on",
-				hideThumbsOnMobile:"off",
-				hideSliderAtLimit:0,
-				hideCaptionAtLimit:0,
-				hideAllCaptionAtLilmit:0,
-				debugMode:false,
-				fallbacks: {
-					simplifyAll:"off",
-					disableFocusListener:false,
-				}
-			});
-
-		// SET TARGET DATE TO START COUNT DOWN FROM
-		// SET UNLIMITED TIME STAMPS TO JUMP TO OTHER SLIDES BASED ON THE REST TIME VIA slidechanges
-		// SET THE JUMP AHEAD VIA THE QUICK JUMP  (15000 == 15 sec)
-		// DONT FORGET TO DEFINE THE CONTAINER ID 
-
-		var targetdate =  new Date().getTime() + 864000000 // i.e. '2015/12/31 24:00',
+			{{#if countdown}}
+			var targetdate =  new Date().getTime() + 864000000 // i.e. '2015/12/31 24:00',
 				slidechanges = [
 												{ days:0, hours:0, minutes:0, seconds:12, slide:2},
 												{ days:0, hours:0, minutes:0, seconds:0, slide:3}
 												];
+			tp_countdown(sliderMain,targetdate,slidechanges);       
+			RsTypewriterAddOn(jQuery, sliderMain);
+			{{/if}}
 
-		tp_countdown(sliderCountdown,targetdate,slidechanges);       
-		RsTypewriterAddOn(jQuery, sliderCountdown);
-
-		{{/if}}
-
+    {{/if}}
+		
+		{{#unless slider-main}}
       var sliderServices = jQuery("#rev_slider_services").show().revolution({
 						sliderType:"standard",
             jsFileLocation:"",
@@ -311,6 +274,7 @@
 						}
 					});
        
+			 		{{#if slider-revealer}}
           var revealSlider = jQuery("#rev_slider_revealer").show().revolution({
 						sliderType:"standard",
 						jsFileLocation:"",
@@ -415,10 +379,12 @@
 							disableFocusListener:false,
 						}
 					});
-					{{#if slider-revealer}}
+
 					RsParticlesAddOn(revealSlider);
     			RsRevealerAddOn(jQuery, revealSlider, "<div class='rsaddon-revealer-spinner rsaddon-revealer-spinner-1'><div class='rsaddon-revealer-1'><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><span style='background: \{{color}}'><\/span><\/div><\/div \/>");
 					{{/if}}
+
+					{{/unless}}
 					
 				});
 </script>

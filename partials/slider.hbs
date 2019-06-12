@@ -1,18 +1,21 @@
 <div class="o-layout__slider-container">
     <div class="o-layout__slider">
 
-        {{#if slider-main}}
-        <div class="rev_slider_wrapper{{#unless standard-slider}} fullscreen-container{{/unless}}" style="background-color:#102535;padding:0px;">
+        {{#if slider-revealer}}
+        {{> slider-reveal}}
+        {{/if}}
 
-            <div id="rev_slider_{{#unless custom-id}}main{{/unless}}{{#if custom-id}}{{custom-id}}{{/if}}" class="rev_slider tp-overflow-hidden{{#unless standard-slider}} fullscreenbanner{{/unless}}" data-version="5.4.5" style="display:none">
+        {{#unless slider-revealer}}
+
+        {{#if slider-main}}
+        <div class="rev_slider_wrapper{{#unless standard-height}} fullscreen-container{{/unless}}" style="background-color:#102535;padding:0px;">
+
+            <div id="rev_slider_{{#unless custom-id}}main{{/unless}}{{#if custom-id}}{{custom-id}}{{/if}}" class="rev_slider tp-overflow-hidden{{#unless standard-height}} fullscreenbanner{{/unless}}" data-version="5.4.5" style="display:none">
                 <!-- BEGIN SLIDES LIST -->
                 <ul>
                 
                     {{#if standard-slider}}
-                    {{#unless openday-slider}}
-                    {{> slide-standard}}
-                    {{/unless}}
-                    {{!-- {{> slide-openday}} --}}
+                    {{> slide-openday}}
                     {{> slide-countdown}}
                     {{/if}}
 
@@ -27,7 +30,7 @@
             <!-- ******************* -->
             <!-- BEGIN STATIC LAYERS -->
             <!-- ******************* -->
-            {{#unless openday-slider}}
+            {{#unless no-play-controls}}
             <div class="tp-static-layers">
                 <!-- PLAY?PAUSE TOGGLE SLIDE STATIC LAYER -->
                 <div class="tp-caption tp-resizeme tp-static-layer" 
@@ -62,6 +65,8 @@
         {{#unless hide-slider-min}}
         <div class="c-minimal-banner" style="background-image: url('//www.adelaide.edu.au/front/images/slides/study-2019.jpg');"></div>
         {{/unless}}
+        {{/unless}}
+
         {{/unless}}
 
     </div> {{!-- o layout slider --}}
