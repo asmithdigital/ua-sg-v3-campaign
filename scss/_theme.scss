@@ -4,70 +4,45 @@
 .ua-gallery-card {
   @include mdc-elevation(0);
 
-  &.has-text-over-media {
-
-    .demo-card {
+  .has-text-over-media & {
       
-      &__secondary {
-        padding-top: 1rem;
-      }
+    &__secondary {
+      padding-top: 1rem;
+    }
 
-      &__media {
-        @include mdc-card-media-aspect-ratio(4, 3);
-      }
+    &__media {
+      @include mdc-card-media-aspect-ratio(4, 3);
+    }
 
-      &__media-content {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: end;
-            align-items: flex-end;
-        background: rgba(0,0,0,.5);
-        padding-bottom: 4rem;
-      }
+    &__media-content {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: end;
+          align-items: flex-end;
+      background: rgba(0,0,0,.5);
+      padding-bottom: 4rem;
+    }
 
-      &__title,
-      &__subtitle {
-        color: white;
-      }
+    &__title,
+    &__subtitle {
+      color: white;
+    }
 
-      &__primary {
-        padding: 1rem;
-      }
-      
-      &__title {
-        margin: 0;
-      }
-      
-      // &__subtitle {
-      //   color: rgba(0, 0, 0, 0.54);
-      //   /* @alternate */
-      //   color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
-      //   margin: 0;
-      // }
-      
-      // &__secondary {
-      //   color: rgba(0, 0, 0, 0.54);
-      //   /* @alternate */
-      //   color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
-      //   padding: 0 1rem 8px 1rem;
-      // }
-      
-      // &-shaped {
-      //   /* @noflip */
-      //   border-radius: 24px 8px;
-      // }
-      // [dir=rtl] .demo-card-shaped, .demo-card-shaped[dir=rtl] {
-      //   /* @noflip */
-      //   border-radius: 8px 24px;
-      // }
+    &__primary {
+      padding: 1rem;
+    }
+    
+    &__title {
+      margin: 0;
     }
   }
 }
 
 //  Image list
-.my-image-list {
-  $mdc-image-list-masonry-gutter-size: 0;
-  @include mdc-image-list-masonry-columns(4);
+.ua-social-image-list {
+  // $mdc-image-list-masonry-gutter-size: 0;
+  // @include mdc-image-list-standard-columns(5);
+  @include mdc-image-list-masonry-columns(3);
 }
 
 // Buttons
