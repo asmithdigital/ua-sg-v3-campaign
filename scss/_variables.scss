@@ -34,11 +34,11 @@ $mdc-theme-secondary: #d40000;
 
 // Layouts
 // $mdc-layout-grid-max-width: 95rem;
-// $mdc-layout-grid-default-gutter: (
-//   desktop: 0,
-//   tablet: 0,
-//   phone: 0
-// ) 
+$mdc-layout-grid-default-gutter: (
+  desktop: 50px,
+  tablet: 25px,
+  phone: 50px
+) 
 
 
 // Theme background ($mdc-theme-background) appears behind scrollable content. Surface color ($mdc-theme-surface) is mapped to the surface of components such as cards, sheets, and menus. Error color ($mdc-theme-error) is used to indicate an error state for components such as text fields provided with inaccurate input.

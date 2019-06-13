@@ -18,7 +18,7 @@
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: end;
-          align-items: flex-end;
+      align-items: flex-end;
       background: rgba(0,0,0,.5);
       padding-bottom: 4rem;
     }
@@ -38,10 +38,14 @@
   }
 }
 
+.ua-social-grid {
+  .mdc-layout-grid__cell *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 //  Image list
 .ua-social-image-list {
-  // $mdc-image-list-masonry-gutter-size: 0;
-  // @include mdc-image-list-standard-columns(5);
   @include mdc-image-list-masonry-columns(3);
 }
 

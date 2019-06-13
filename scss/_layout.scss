@@ -1,15 +1,27 @@
 .ua-gallery-grid {
   --mdc-layout-grid-gutter-desktop: 0;
+  --mdc-layout-grid-gutter-tablet: 0;
+  --mdc-layout-grid-gutter-phone: 0;
   padding: 0;
 
   &__cell {
-    @include mdc-layout-grid-cell(desktop, 4, 0);
+    @include mdc-layout-grid-media-query_(phone) {
+      @include mdc-layout-grid-cell(phone, 12, 0);
+    }
+    @include mdc-layout-grid-media-query_(tablet) {
+      @include mdc-layout-grid-cell(tablet, 8, 0);
+    }
+    @include mdc-layout-grid-media-query_(desktop) {
+      @include mdc-layout-grid-cell(desktop, 4, 0);
+    }
   }
 }
 
+
 .ua-content-grid {
   --mdc-layout-grid-margin-desktop: 150px 50px;
-  // --mdc-layout-grid-gutter-desktop: 90px;
+  --mdc-layout-grid-margin-tablet: 100px 25px;
+  --mdc-layout-grid-margin-phone: 50px 25px;
   max-width: 75rem;
 
   &__layout-section {
