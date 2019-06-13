@@ -1,4 +1,91 @@
-// List
+// Demo card
+// ================================
+
+.ua-gallery-card {
+  @include mdc-elevation(0);
+
+  &.has-text-over-media {
+
+    .demo-card {
+      
+      &__secondary {
+        padding-top: 1rem;
+      }
+
+      &__media {
+        @include mdc-card-media-aspect-ratio(4, 3);
+      }
+
+      &__media-content {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: end;
+            align-items: flex-end;
+        background: rgba(0,0,0,.5);
+        padding-bottom: 4rem;
+      }
+
+      &__title,
+      &__subtitle {
+        color: white;
+      }
+
+      &__primary {
+        padding: 1rem;
+      }
+      
+      &__title {
+        margin: 0;
+      }
+      
+      // &__subtitle {
+      //   color: rgba(0, 0, 0, 0.54);
+      //   /* @alternate */
+      //   color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+      //   margin: 0;
+      // }
+      
+      // &__secondary {
+      //   color: rgba(0, 0, 0, 0.54);
+      //   /* @alternate */
+      //   color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+      //   padding: 0 1rem 8px 1rem;
+      // }
+      
+      // &-shaped {
+      //   /* @noflip */
+      //   border-radius: 24px 8px;
+      // }
+      // [dir=rtl] .demo-card-shaped, .demo-card-shaped[dir=rtl] {
+      //   /* @noflip */
+      //   border-radius: 8px 24px;
+      // }
+    }
+  }
+}
+
+//  Image list
+.my-image-list {
+  $mdc-image-list-masonry-gutter-size: 0;
+  @include mdc-image-list-masonry-columns(4);
+}
+
+// Buttons
+.ua-button--secondary {
+  @include mdc-button-container-fill-color(secondary);
+}
+
+// Used in slider
+.ua-button-outlined--inverse {
+  @include mdc-button-outline-color(white);
+  @include mdc-button-ink-color(white);
+}
+
+
+
+
+
+// List from original to remind me about conditional theme stuff
 .mdc-list {
   // border: 1px solid rgba(0,0,0,.1);
   // background: $mdc-theme-background;
@@ -13,32 +100,18 @@
   // }
 }
 
-// Image list
-.mdc-image-list {
-  @include mdc-image-list-masonry-columns(2);
-}
 
-$mdc-image-list-masonry-gutter-size: 0;
-.my-image-list {
-  @include mdc-image-list-masonry-columns(4);
-}
-
-// Drawer
-.drawer-component-wrapper {
-  background: rgba(0, 0, 0, 0.3);
-
-  .mdc-drawer {
-    @include mdc-elevation(16);
-
-    .mdc-drawer__content {
-      padding: 0;
-    }
+// Override SG conflicts
+// ================================
+body {
+  .material-icons {
+    font-family: 'Material Icons' !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
   }
 }
 
-
-// Override SG
-// ================================
 .mdc-text-field__input {
   display: inherit;
   margin: inherit;
@@ -46,122 +119,4 @@ $mdc-image-list-masonry-gutter-size: 0;
 
 .mdc-select__native-control {
   background-image: inherit;
-}
-
-.mdc-card {
-  // margin-bottom: $crane-row-margin;
-  @include mdc-elevation(0);
-}
-
-
-
-
-// Demo card
-// ================================
-
-.demo-card__media-content {
-  background: rgba(0,0,0,.5);
-  padding-bottom: 4rem;
-}
-
-.demo-card__media {
-  @include mdc-card-media-aspect-ratio(4, 3);
-}
-
-
-
-// The original styles
-.demo-card__primary {
-  padding: 1rem;
-}
-
-.demo-card__title {
-  margin: 0;
-}
-
-.demo-card__subtitle {
-  color: rgba(0, 0, 0, 0.54);
-  /* @alternate */
-  color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
-  margin: 0;
-}
-
-.demo-card__secondary {
-  color: rgba(0, 0, 0, 0.54);
-  /* @alternate */
-  color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
-  padding: 0 1rem 8px 1rem;
-}
-
-.demo-card-shaped {
-  /* @noflip */
-  border-radius: 24px 8px;
-}
-[dir=rtl] .demo-card-shaped, .demo-card-shaped[dir=rtl] {
-  /* @noflip */
-  border-radius: 8px 24px;
-}
-
-.demo-card__media.mdc-card__media--square {
-  // width: 110px;
-}
-
-.demo-basic-with-header .demo-card__secondary,
-.demo-basic-with-text-over-media .demo-card__secondary {
-  padding-top: 1rem;
-}
-
-.demo-basic-with-text-over-media .demo-card__media-content {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-      align-items: flex-end;
-}
-.demo-basic-with-text-over-media .demo-card__media-content .demo-card__title,
-.demo-basic-with-text-over-media .demo-card__media-content .demo-card__subtitle {
-  color: white;
-}
-
-.demo-ui-control .demo-card__primary-action {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-}
-
-
-
-
-// Hack positioning of demo element
-// ================================
-// Top app bar
-.mdc-top-app-bar {
-  @include mdc-elevation(4);
-  position: relative;
-  z-index: 1;
-
-  &:not(.mdc-top-app-bar--short) {
-    width: 100%;
-  }
-}
-
-// Menu
-.mdc-menu-surface--anchor > .mdc-menu {
-  position: relative;
-  z-index: 1;
-}
-
-// Snackbar 
-.mdc-snackbar {
-  position: relative;
-  margin: 0;
-  justify-content: start;
-  z-index: 1;
-}
-
-// Dialog
-.mdc-dialog {
-  position: relative;
-  justify-content: start;
-  z-index: 1;
 }

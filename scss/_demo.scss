@@ -1,0 +1,118 @@
+//  Only targets element son the demo page with the wrapper container
+
+.demo {
+
+
+  // Hack positioning of demo elements
+  // ================================
+
+  // Image list
+  .mdc-image-list {
+    @include mdc-image-list-masonry-columns(2);
+  }
+
+  // Top app bar
+  .mdc-top-app-bar {
+    @include mdc-elevation(4);
+    position: relative;
+    z-index: 1;
+
+    &:not(.mdc-top-app-bar--short) {
+      width: 100%;
+    }
+  }
+
+  // Menu
+  .mdc-menu-surface--anchor > .mdc-menu {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Snackbar 
+  .mdc-snackbar {
+    position: relative;
+    margin: 0;
+    justify-content: start;
+    z-index: 1;
+  }
+
+  // Dialog
+  .mdc-dialog {
+    position: relative;
+    justify-content: start;
+    z-index: 1;
+  }
+
+  // Drawer
+  .drawer-component-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+
+    .mdc-drawer {
+      @include mdc-elevation(16);
+
+      .mdc-drawer__content {
+        padding: 0;
+      }
+    }
+  }
+
+  // Cards demo styles
+  .demo-card__primary {
+    padding: 1rem;
+  }
+  
+  .demo-card__title {
+    margin: 0;
+  }
+  
+  .demo-card__subtitle {
+    color: rgba(0, 0, 0, 0.54);
+    /* @alternate */
+    color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+    margin: 0;
+  }
+  
+  .demo-card__secondary {
+    color: rgba(0, 0, 0, 0.54);
+    /* @alternate */
+    color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+    padding: 0 1rem 8px 1rem;
+  }
+  
+  .demo-card-shaped {
+    /* @noflip */
+    border-radius: 24px 8px;
+  }
+  [dir=rtl] .demo-card-shaped, .demo-card-shaped[dir=rtl] {
+    /* @noflip */
+    border-radius: 8px 24px;
+  }
+  
+  .demo-card__media.mdc-card__media--square {
+    // width: 110px;
+  }
+  
+  .demo-basic-with-header .demo-card__secondary,
+  .demo-basic-with-text-over-media .demo-card__secondary {
+    padding-top: 1rem;
+  }
+  
+  .demo-basic-with-text-over-media .demo-card__media-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+        align-items: flex-end;
+  }
+  .demo-basic-with-text-over-media .demo-card__media-content .demo-card__title,
+  .demo-basic-with-text-over-media .demo-card__media-content .demo-card__subtitle {
+    color: white;
+  }
+  
+  .demo-ui-control .demo-card__primary-action {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+
+}
