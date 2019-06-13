@@ -13,7 +13,6 @@
   <link href="dist/deps/ua-dep/css/app.css" rel="stylesheet">
   <link href="//global.adelaide.edu.au/style-guide-v2/latest/css/global-assets.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="dist/bundle.css">
@@ -107,6 +106,7 @@
             </div> 
         </div>
         <div class="o-layout__container">
+          
           </div>
           
           <div class="cbp-l-slider-testimonials-wrap">
@@ -446,8 +446,43 @@
 
   
   <script src="dist/deps/ua-dep/js/app.jquery.js"></script>
-  <script type="text/javascript" src="dist/deps/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
   <script src="dist/bundle.js" async></script>
+  
+  <script type="text/javascript" src="dist/deps/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+  <script>
+    // init cubeportfolio
+    $('#js-grid-slider-testimonials').cubeportfolio({
+      layoutMode: 'slider',
+      drag: true,
+      auto: false,
+      autoTimeout: 5000,
+      autoPauseOnHover: true,
+      showNavigation: true,
+      showPagination: true,
+      rewindNav: true,
+      scrollByPage: false,
+      gridAdjustment: 'responsive',
+      mediaQueries: [{
+          width: 0,
+          cols: 1,
+      }],
+      gapHorizontal: 0,
+      gapVertical: 0,
+      caption: '',
+      displayType: 'default',
+    });
+    // init cubeportfolio
+    $('#js-grid-faq').cubeportfolio({
+      filters: '#js-filters-faq',
+      defaultFilter: '*',
+      animationType: 'sequentially',
+      gridAdjustment: 'default',
+      displayType: 'default',
+      caption: 'expand',
+      gapHorizontal: 0,
+      gapVertical: 0,
+    });
+  </script>
   
 
   </body>

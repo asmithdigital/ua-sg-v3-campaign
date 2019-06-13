@@ -1,0 +1,42 @@
+<script type="text/javascript" src="dist/deps/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script>
+  {{#if cube-gallery}}
+  
+  {{/if}}
+  {{#if cube-testimonials}}
+  // init cubeportfolio
+  $('#js-grid-slider-testimonials').cubeportfolio({
+    layoutMode: 'slider',
+    drag: true,
+    auto: false,
+    autoTimeout: 5000,
+    autoPauseOnHover: true,
+    showNavigation: true,
+    showPagination: true,
+    rewindNav: true,
+    scrollByPage: false,
+    gridAdjustment: 'responsive',
+    mediaQueries: [{
+        width: 0,
+        cols: 1,
+    }],
+    gapHorizontal: 0,
+    gapVertical: 0,
+    caption: '',
+    displayType: 'default',
+  });
+  {{/if}}
+  {{#if cube-faq}}
+  // init cubeportfolio
+  $('#js-grid-faq').cubeportfolio({
+    filters: '#js-filters-faq',
+    defaultFilter: '*',
+    animationType: 'sequentially',
+    gridAdjustment: 'default',
+    displayType: 'default',
+    caption: 'expand',
+    gapHorizontal: 0,
+    gapVertical: 0,
+  });
+  {{/if}}
+</script>

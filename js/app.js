@@ -39,41 +39,6 @@ if ($toggleButton) {
   iconToggle.unbounded = true;
 }
 
-// init cubeportfolio
-$('#js-grid-slider-testimonials').cubeportfolio({
-  layoutMode: 'slider',
-  drag: true,
-  auto: false,
-  autoTimeout: 5000,
-  autoPauseOnHover: true,
-  showNavigation: true,
-  showPagination: true,
-  rewindNav: true,
-  scrollByPage: false,
-  gridAdjustment: 'responsive',
-  mediaQueries: [{
-      width: 0,
-      cols: 1,
-  }],
-  gapHorizontal: 0,
-  gapVertical: 0,
-  caption: '',
-  displayType: 'default',
-});
-
- // init cubeportfolio
- $('#js-grid-faq').cubeportfolio({
-  filters: '#js-filters-faq',
-  defaultFilter: '*',
-  animationType: 'sequentially',
-  gridAdjustment: 'default',
-  displayType: 'default',
-  caption: 'expand',
-  gapHorizontal: 0,
-  gapVertical: 0,
-});
-
-
 // Glitch theme builder below
 
 // import {
