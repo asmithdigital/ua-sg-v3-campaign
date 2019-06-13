@@ -186,6 +186,9 @@
                             			data-basealign="slide" 
                             			data-responsive_offset="on" 
                             
+                            			data-startslide="0" 
+                            			data-endslide="1" 
+                            
                             			data-frames='[{"delay":1500,"speed":2000,"frame":"0","from":"x:left;rX:45deg;fb:20px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
                             			data-textAlign="['center','center','center','center']"
                             			data-paddingtop="[0,0,0,0]"
@@ -962,20 +965,13 @@
           }
         });
   
-  			// SET TARGET DATE TO START COUNT DOWN FROM
-  			// SET UNLIMITED TIME STAMPS TO JUMP TO OTHER SLIDES BASED ON THE REST TIME VIA slidechanges
-  			// SET THE JUMP AHEAD VIA THE QUICK JUMP  (15000 == 15 sec)
-  			// DONT FORGET TO DEFINE THE CONTAINER ID 
-  			var targetdate =  new Date().getTime() + 1560522600 // https://www.epochconverter.com/,
-  				slidechanges = [
-  												{ days:0, hours:0, minutes:0, seconds:12, slide:2},
-  												{ days:0, hours:0, minutes:0, seconds:0, slide:3}
-  												];
-  			tp_countdown(sliderMain,targetdate,slidechanges);       
+  			var currentDate = new Date().getTime;
+  			var deadline = new Date('Monday, June 16, 2019 12:22:37 AM GMT+09:30');
+  			var newDate = deadline.getTime();
+  		
+  
+  			tp_countdown(sliderMain,newDate);       
   			RsTypewriterAddOn(jQuery, sliderMain);
-  
-  			console.log(new Date().getTime());
-  
   
   		
   
