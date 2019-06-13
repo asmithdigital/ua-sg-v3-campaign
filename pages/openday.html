@@ -37,13 +37,13 @@ no-slide-controls: true
   <div class="ua-content-grid__layout-section{{section}}">
     <div class="mdc-layout-grid ua-content-grid" id="timetable">
       <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
             <h2 class="mdc-typography--headline2">Health and Medical Sciences</h2>
             <p class="mdc-typography mdc-typography--body2">Bacon ipsum dolor amet turducken ground round salami porchetta tongue, short ribs kevin capicola drumstick. Alcatra pork short ribs capicola, corned beef chicken fatback. Burgdoggen spare ribs landjaeger ribeye tongue salami fatback meatloaf pig bresaola. </p>
             <button class="mdc-button mdc-button--raised">Learn More</button>
             <button class="mdc-button mdc-button--raised ua-button--secondary">Learn More</button>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
             <h3 class="mdc-typography--headline3">Highlights</h3>
             <ul class="mdc-list mdc-list--two-line">
               <li class="mdc-list-item" tabindex="0">
@@ -77,18 +77,19 @@ no-slide-controls: true
   {{/each}}
 
   <div class="ua-content-grid__layout-section">
-    
+  
     <div class="mdc-layout-grid ua-content-grid ua-social-grid">
       <div class="mdc-layout-grid__inner">
-        <!-- <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5"></div> -->
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-          <img src="https://www.adelaide.edu.au/front/images/mo-scholarships-2.jpg">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div style="max-width: 200px; margin: 0 auto;">
+            <img src="https://www.adelaide.edu.au/front/images/mo-scholarships-2.jpg">
+          </div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 is-centered-content">
           <h2 class="mdc-typography mdc-typography--headline2">Get social and Win</h2>
           <p>Talk to our world-class teachers and students to learn about degrees in Education, Media, Humanities, Music, Teaching and Social Sciences. Find out how you can develop a skill set for building a successful career for life.</p>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <ul class="mdc-list mdc-list--two-line">
             <li class="mdc-list-item" tabindex="0">
               <span class="mdc-list-item__graphic material-icons" aria-hidden="true">whatshot</span>
@@ -100,7 +101,7 @@ no-slide-controls: true
             <li role="separator" class="mdc-list-divider"></li>
           </ul>
         </div>
-        <div class="mdc-layout-grid__cell">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <ul class="mdc-list mdc-list--two-line">
             <li class="mdc-list-item" tabindex="0">
               <span class="mdc-list-item__graphic material-icons" aria-hidden="true">whatshot</span>
@@ -112,7 +113,7 @@ no-slide-controls: true
             <li role="separator" class="mdc-list-divider"></li>
           </ul>
         </div>
-        <div class="mdc-layout-grid__cell">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
           <ul class="mdc-list mdc-list--two-line">
             <li class="mdc-list-item" tabindex="0">
               <span class="mdc-list-item__graphic material-icons" aria-hidden="true">whatshot</span>
@@ -124,9 +125,8 @@ no-slide-controls: true
             <li role="separator" class="mdc-list-divider"></li>
           </ul>
         </div>
-        <!-- <div class="mdc-layout-grid__cell"></div> -->
-        <div class="mdc-layout-grid__cell">
-          <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list ua-social-image-list">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list ua-social-image-list" style="max-width: 400px;">
             {{#repeat 3}}  
             <li class="mdc-image-list__item">
               <img class="mdc-image-list__image" src="https://www.adelaide.edu.au/front/images/mo-scholarships-2.jpg">
