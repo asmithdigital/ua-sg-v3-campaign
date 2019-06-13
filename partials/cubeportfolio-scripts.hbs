@@ -1,42 +1,134 @@
 <script type="text/javascript" src="dist/deps/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
 <script>
-  {{#if cube-gallery}}
-  
-  {{/if}}
-  {{#if cube-testimonials}}
-  // init cubeportfolio
-  $('#js-grid-slider-testimonials').cubeportfolio({
-    layoutMode: 'slider',
-    drag: true,
-    auto: false,
-    autoTimeout: 5000,
-    autoPauseOnHover: true,
-    showNavigation: true,
-    showPagination: true,
-    rewindNav: true,
-    scrollByPage: false,
-    gridAdjustment: 'responsive',
-    mediaQueries: [{
-        width: 0,
-        cols: 1,
-    }],
-    gapHorizontal: 0,
-    gapVertical: 0,
-    caption: '',
-    displayType: 'default',
-  });
-  {{/if}}
-  {{#if cube-faq}}
-  // init cubeportfolio
-  $('#js-grid-faq').cubeportfolio({
-    filters: '#js-filters-faq',
-    defaultFilter: '*',
-    animationType: 'sequentially',
-    gridAdjustment: 'default',
-    displayType: 'default',
-    caption: 'expand',
-    gapHorizontal: 0,
-    gapVertical: 0,
-  });
-  {{/if}}
+  (function($, window, document, undefined) {
+    'use strict';
+    {{#if cube-gallery}}
+    // init cubeportfolio
+    $('#js-grid-lightbox-gallery').cubeportfolio({
+      filters: '#js-filters-juicy-projects',
+      layoutMode: 'grid',
+      mediaQueries: [{
+        width: 1500,
+        cols: 4,
+      }, {
+        width: 1100,
+        cols: 3,
+      }, {
+        width: 800,
+        cols: 3,
+      }, {
+        width: 480,
+        cols: 2,
+        options: {
+          caption: '',
+        }
+      }],
+      defaultFilter: '*',
+      animationType: 'quicksand',
+      gapHorizontal: 0,
+      gapVertical: 0,
+      gridAdjustment: 'responsive',
+      caption: 'overlayBottomPush',
+      displayType: 'sequentially',
+      displayTypeSpeed: 100,
+
+      // lightbox
+      lightboxDelegate: '.cbp-lightbox',
+      lightboxGallery: true,
+      lightboxTitleSrc: 'data-title',
+      lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+
+      // singlePage popup
+      singlePageDelegate: '.cbp-singlePage',
+      singlePageDeeplinking: true,
+      singlePageStickyNavigation: true,
+      singlePageCounter: '<div class="cbp-popup-singlePage-counter">{{current}} of {{total}}</div>',
+      singlePageCallback: function(url, element) {
+        // to update singlePage content use the following method: this.updateSinglePage(yourContent)
+        var t = this;
+
+        $.ajax({
+          url: url,
+          type: 'GET',
+          dataType: 'html',
+          timeout: 30000
+        })
+          .done(function(result) {
+            t.updateSinglePage(result);
+          })
+          .fail(function() {
+            t.updateSinglePage('AJAX Error! Please refresh the page!');
+          });
+      },
+
+      // singlePageInline
+      singlePageInlineDelegate: '.cbp-singlePageInline',
+      singlePageInlinePosition: 'below',
+      singlePageInlineInFocus: true,
+      singlePageInlineCallback: function(url, element) {
+        // to update singlePageInline content use the following method: this.updateSinglePageInline(yourContent)
+        var t = this;
+
+        $.ajax({
+          url: url,
+          type: 'GET',
+          dataType: 'html',
+          timeout: 30000
+        })
+          .done(function(result) {
+
+            t.updateSinglePageInline(result);
+
+          })
+          .fail(function() {
+            t.updateSinglePageInline('AJAX Error! Please refresh the page!');
+          });
+      },
+
+      plugins: {
+        loadMore: {
+          element: '#js-loadMore-lightbox-gallery',
+          action: 'click',
+          loadItems: 3,
+        }
+      },
+    });
+    {{/if}}
+    {{#if cube-testimonials}}
+    // init cubeportfolio
+    $('#js-grid-slider-testimonials').cubeportfolio({
+      layoutMode: 'slider',
+      drag: true,
+      auto: false,
+      autoTimeout: 5000,
+      autoPauseOnHover: true,
+      showNavigation: true,
+      showPagination: true,
+      rewindNav: true,
+      scrollByPage: false,
+      gridAdjustment: 'responsive',
+      mediaQueries: [{
+          width: 0,
+          cols: 1,
+      }],
+      gapHorizontal: 0,
+      gapVertical: 0,
+      caption: '',
+      displayType: 'default',
+    });
+    {{/if}}
+    {{#if cube-faq}}
+    // init cubeportfolio
+    $('#js-grid-faq').cubeportfolio({
+      filters: '#js-filters-faq',
+      defaultFilter: '*',
+      animationType: 'sequentially',
+      gridAdjustment: 'default',
+      displayType: 'default',
+      caption: 'expand',
+      gapHorizontal: 0,
+      gapVertical: 0,
+    });
+    {{/if}}
+  })(jQuery, window, document);
 </script>

@@ -1,3 +1,15 @@
+<script src="dist/deps/ua-dep/js/app.jquery.js"></script>
+<script src="dist/bundle.js" async></script>
+
+{{#if cubeportfolio}}
+{{> cubeportfolio-scripts}}
+{{/if}}
+
+{{#if slider}}
+{{> slider-scripts}}
+{{/if}}	
+
+
 {{!-- <script src="//global.adelaide.edu.au/style-guide-v2/latest/js/plugins/global-assets-loader.js"></script>
 <script>
   var _globalassets = new GlobalAssetsLoader({
@@ -19,14 +31,3 @@
     }
   });
 </script> --}}
-
-<script src="dist/deps/ua-dep/js/app.jquery.js"></script>
-<script src="dist/bundle.js" async></script>
-
-{{#if cubeportfolio}}
-{{> cubeportfolio-scripts}}
-{{/if}}
-
-{{#if slider}}
-{{> slider-scripts}}
-{{/if}}	

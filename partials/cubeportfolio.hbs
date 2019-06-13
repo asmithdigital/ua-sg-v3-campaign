@@ -1,0 +1,44 @@
+{{!-- <div id="js-filters-juicy-projects" class="cbp-l-filters-button cbp-l-filters-alignCenter">
+  <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+    All <div class="cbp-filter-counter"></div>
+  </div>
+  <div data-filter=".ux" class="cbp-filter-item">
+    UX <div class="cbp-filter-counter"></div>
+  </div>
+  <div data-filter=".web-design" class="cbp-filter-item">
+    Web Design <div class="cbp-filter-counter"></div>
+  </div>
+  <div data-filter=".ecommerce" class="cbp-filter-item">
+    eCommerce <div class="cbp-filter-counter"></div>
+  </div>
+</div> --}}
+
+<div id="js-grid-lightbox-gallery" class="cbp">
+
+  {{#repeat 6}}
+  <div class="cbp-item">
+    <a href="{{root}}dist/deps/ajax/gallery-item1.html" class="cbp-caption cbp-singlePageInline" data-title="Title" rel="nofollow">
+      <div class="cbp-caption-defaultWrap">
+        <img src="https://www.adelaide.edu.au/front/images/mo-scholarships-2.jpg" alt="">
+      </div>
+      <div class="cbp-caption-activeWrap">
+        <div class="cbp-l-caption-alignLeft">
+          <div class="cbp-l-caption-body">
+            <div class="cbp-l-caption-title">Title</div>
+            <div class="cbp-l-caption-desc">Description</div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  {{/repeat}}
+  
+</div>
+
+<div id="js-loadMore-lightbox-gallery" class="cbp-l-loadMore-button">
+  <a href="{{root}}dist/deps/ajax/loadmore.html" class="cbp-l-loadMore-link" rel="nofollow">
+    <span class="cbp-l-loadMore-defaultText">LOAD MORE (<span class="cbp-l-loadMore-loadItems">7</span>)</span>
+    <span class="cbp-l-loadMore-loadingText">LOADING...</span>
+    <span class="cbp-l-loadMore-noMoreLoading">NO MORE ITEMS</span>
+  </a>
+</div>

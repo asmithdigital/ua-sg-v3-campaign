@@ -444,45 +444,49 @@
     <a href="#ua-top" title="back to top" class="c-btn js-smooth-scroll"><i class="fa fa-angle-up"></i> top</a>
   </p>
 
-  
   <script src="dist/deps/ua-dep/js/app.jquery.js"></script>
   <script src="dist/bundle.js" async></script>
   
   <script type="text/javascript" src="dist/deps/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
   <script>
-    // init cubeportfolio
-    $('#js-grid-slider-testimonials').cubeportfolio({
-      layoutMode: 'slider',
-      drag: true,
-      auto: false,
-      autoTimeout: 5000,
-      autoPauseOnHover: true,
-      showNavigation: true,
-      showPagination: true,
-      rewindNav: true,
-      scrollByPage: false,
-      gridAdjustment: 'responsive',
-      mediaQueries: [{
-          width: 0,
-          cols: 1,
-      }],
-      gapHorizontal: 0,
-      gapVertical: 0,
-      caption: '',
-      displayType: 'default',
-    });
-    // init cubeportfolio
-    $('#js-grid-faq').cubeportfolio({
-      filters: '#js-filters-faq',
-      defaultFilter: '*',
-      animationType: 'sequentially',
-      gridAdjustment: 'default',
-      displayType: 'default',
-      caption: 'expand',
-      gapHorizontal: 0,
-      gapVertical: 0,
-    });
+    (function($, window, document, undefined) {
+      'use strict';
+      // init cubeportfolio
+      $('#js-grid-slider-testimonials').cubeportfolio({
+        layoutMode: 'slider',
+        drag: true,
+        auto: false,
+        autoTimeout: 5000,
+        autoPauseOnHover: true,
+        showNavigation: true,
+        showPagination: true,
+        rewindNav: true,
+        scrollByPage: false,
+        gridAdjustment: 'responsive',
+        mediaQueries: [{
+            width: 0,
+            cols: 1,
+        }],
+        gapHorizontal: 0,
+        gapVertical: 0,
+        caption: '',
+        displayType: 'default',
+      });
+      // init cubeportfolio
+      $('#js-grid-faq').cubeportfolio({
+        filters: '#js-filters-faq',
+        defaultFilter: '*',
+        animationType: 'sequentially',
+        gridAdjustment: 'default',
+        displayType: 'default',
+        caption: 'expand',
+        gapHorizontal: 0,
+        gapVertical: 0,
+      });
+    })(jQuery, window, document);
   </script>
+  
+  
   
 
   </body>
