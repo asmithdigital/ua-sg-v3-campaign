@@ -14,6 +14,10 @@
     @include mdc-layout-grid-media-query_(desktop) {
       @include mdc-layout-grid-cell(desktop, 4, 0);
     }
+
+    @media (min-width: 1400px) {
+      @include mdc-layout-grid-cell(desktop, 3, 0);
+    }
   }
 }
 
