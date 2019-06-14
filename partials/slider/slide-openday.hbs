@@ -32,18 +32,25 @@
       >Sunday 18 August 2019</div>
     
     <!-- BUTTON LAYERS -->
-      <a href="#timetable" target="_self" class="tp-caption tp-resizeme mdc-button mdc-button--outlined ua-button-outlined--inverse rs-parallaxlevel-8 js-smooth-scroll"
+
+      <div class="tp-caption tp-resizeme rs-parallaxlevel-8"
       {{!-- <div class="tp-caption tp-resizeme mdc-button mdc-button--outlined ua-button-outlined--inverse rs-parallaxlevel-8" --}}
       data-x="center" 
       data-y="center" 
-      data-hoffset="-250" 
+      data-hoffset="0" 
       data-voffset="80" 
       data-width="auto" 
       data-height="auto"
       data-frames='[{"delay":"+790","speed":1000,"frame":"0","from":"y:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-      style="display: static;"
-      >Timetable</a>
-      <a href="#plan" target="_self" class="tp-caption tp-resizeme mdc-button mdc-button--outlined ua-button-outlined--inverse rs-parallaxlevel-8 js-smooth-scroll"
+      style="display: static;">
+      <a href="#timetable" target="_self" class="mdc-button mdc-button--outlined ua-button-outlined--inverse js-smooth-scroll">Timetable</a>
+			<a href="#plan" target="_self" class="mdc-button mdc-button--outlined ua-button-outlined--inverse js-smooth-scroll">Plan your day</a>
+			<a href="#social" target="_self" class="mdc-button mdc-button--outlined ua-button-outlined--inverse js-smooth-scroll">Get Social to Win</a>
+			<a href="#download" target="_self" class="mdc-button mdc-button--outlined ua-button-outlined--inverse js-smooth-scroll">Download Brochure</a>
+			</div>
+
+
+      {{!-- <a href="#plan" target="_self" class="tp-caption tp-resizeme mdc-button mdc-button--outlined ua-button-outlined--inverse rs-parallaxlevel-8 js-smooth-scroll"
       data-x="center" 
       data-y="center" 
       data-hoffset="-100" 
@@ -72,10 +79,10 @@
       data-height="auto"
       data-frames='[{"delay":"+790","speed":1000,"frame":"0","from":"y:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
       style="display: static;"
-      >Download Brochure</a>
+      >Download Brochure</a> --}}
 
       {{!-- Count down layers --}}
-      <div class="tp-caption  tp-resizeme rs-parallaxlevel-8" 
+      {{!-- <div class="tp-caption  tp-resizeme rs-parallaxlevel-8" 
 			 id="t_days" 
 			 data-x="['center','center','center','center']" data-hoffset="['-180','-180','-180','-120']" 
 			 data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','110']" 
@@ -264,7 +271,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 16; min-width: 120px; max-width: 120px; white-space: nowrap;text-transform:left;color:rgba(255,255,255,1);font-family:Oswald;text-transform: uppercase;">seconds </div>
+			style="z-index: 16; min-width: 120px; max-width: 120px; white-space: nowrap;text-transform:left;color:rgba(255,255,255,1);font-family:Oswald;text-transform: uppercase;">seconds </div> --}}
       {{!-- Count down layers --}}
 
       {{#unless standard-slider}}
