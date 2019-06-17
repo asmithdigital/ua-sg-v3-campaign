@@ -1,7 +1,28 @@
+//  Need to use !important to override the var() in framework
+$content-grid-margin: (
+  desktop: 150px 50px !important,
+  tablet: 100px 25px !important,
+  phone: 50px 25px !important
+);
+
+@mixin custom-layout-grid-generator($grid-margin) {
+  // Use the mixin form Material Layout Grid 
+  @each $size in map-keys($mdc-layout-grid-columns) {
+    @include mdc-layout-grid-media-query_($size) {
+      $margin: map-get($content-grid-margin, $size); // $content-grid-margin map in variables.scss
+
+      @include mdc-layout-grid($size, $margin, $mdc-layout-grid-max-width);
+    }
+  }
+}
+
 .ua-gallery-grid {
-  --mdc-layout-grid-gutter-desktop: 0;
-  --mdc-layout-grid-gutter-tablet: 0;
-  --mdc-layout-grid-gutter-phone: 0;
+  // TODO: need to replace these for browser support.
+  // Cannot use custom properties just yet. This is broken but not in use 
+  // --mdc-layout-grid-gutter-desktop: 0;
+  // --mdc-layout-grid-gutter-tablet: 0;
+  // --mdc-layout-grid-gutter-phone: 0;
+  
   padding: 0;
 
   &__cell {
@@ -23,12 +44,16 @@
 
 
 .ua-content-grid {
-  --mdc-layout-grid-margin-desktop: 150px 50px;
-  --mdc-layout-grid-margin-tablet: 100px 25px;
-  --mdc-layout-grid-margin-phone: 50px 25px;
+  @include custom-layout-grid-generator($content-grid-margin);
+
+  // Cannot use native CSS custom propertoes just yet
+  // --mdc-layout-grid-margin-desktop: 150px 50px;
+  // --mdc-layout-grid-margin-tablet: 100px 25px;
+  // --mdc-layout-grid-margin-phone: 50px 25px;
+
   max-width: 75rem;
 
-  &__layout-section {
+  &__layout {
     &--primary {
       background: $mdc-theme-primary;
     }
@@ -44,10 +69,12 @@
     &--primary,
     &--primary-variant,
     &--secondary {
-      --mdc-theme-text-primary-on-background: white;
-      --mdc-theme-text-secondary-on-background: white;
-      --mdc-theme-text-icon-on-background: white;
-      color: var(--mdc-theme-text-primary-on-background);
+      color: white !important;
+      //  Cannot use var() just yet
+      // --mdc-theme-text-primary-on-background: white;
+      // --mdc-theme-text-secondary-on-background: white;
+      // --mdc-theme-text-icon-on-background: white;
+      // color: var(--mdc-theme-text-primary-on-background);
   
       .mdc-list-divider {
         border-bottom-color: rgba(white, 0.5);

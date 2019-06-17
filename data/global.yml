@@ -3,11 +3,21 @@ layout-section:
       section: ''
     -
       section: '--primary'
+      theme:
+        - text-primary: 'mdc-theme--text-primary-on-dark'
+        - text-secondary: 'mdc-theme--text-secondary-on-dark'
+
     -
       section: ''
     -
       section: '--primary-variant'
+      theme:
+        - text-primary: 'mdc-theme--text-primary-on-dark'
+        - text-secondary: 'mdc-theme--text-secondary-on-dark'
     -
       section: ''
     -
       section: '--secondary'
+      theme:
+        - text-primary: 'mdc-theme--text-primary-on-dark'
+        - text-secondary: 'mdc-theme--text-secondary-on-dark'
