@@ -1,25 +1,25 @@
-	<script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="//asmithdigital.github.io/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
 
   <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
-  {{!-- <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-  <script src="//asmithdigital.github.io/my-fancy-slider/revolution/js/extensions/revolution.extension.video.min.js"></script> --}}
+  {{!-- <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="//asmithdigital.github.io/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script> --}}
 
 	{{#if slider-revealer}}
-	<script type='text/javascript' src='//asmithdigital.github.io/my-fancy-slider/revolution-addons/reveal/js/revolution.addon.revealer.min.js?ver=1.0.0'></script>
-	<script type='text/javascript' src='//asmithdigital.github.io/my-fancy-slider/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
+	<script type='text/javascript' src='//asmithdigital.github.io/rev-slider/revolution-addons/reveal/js/revolution.addon.revealer.min.js?ver=1.0.0'></script>
+	<script type='text/javascript' src='//asmithdigital.github.io/rev-slider/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
 	{{/if}}
 
 	{{#if countdown}}
-	<script type='text/javascript' src='//asmithdigital.github.io/my-fancy-slider/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js'></script>
-	<script type='text/javascript' src='//asmithdigital.github.io/my-fancy-slider/revolution-addons/countdown/revolution.addon.countdown.min.js'></script>
+	<script type='text/javascript' src='//asmithdigital.github.io/rev-slider/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js'></script>
+	<script type='text/javascript' src='//asmithdigital.github.io/rev-slider/revolution-addons/countdown/revolution.addon.countdown.min.js'></script>
 	{{/if}}
 
   <script>
@@ -84,7 +84,7 @@
 
 			{{#if countdown}}
 			var currentDate = new Date().getTime;
-			var deadline = new Date('Monday, July 1, 2019 12:22:37 AM GMT+09:30');
+			var deadline = new Date('Monday, July 1, 2019 2:22:37 AM GMT+09:30');
 			var newDate = deadline.getTime();
 		
 			{{!-- var targetdate =  new Date().getTime() + ??? --}}
